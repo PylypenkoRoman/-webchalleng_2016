@@ -1,0 +1,39 @@
+.skills
+    @extend .section
+    &__in
+        @extend .in
+        padding: 133px 0
+    &__title
+        font-size: 45px
+        color: $text-dark
+        text-transform: uppercase
+        letter-spacing: 0.02em
+        margin: 0 0 70px
+        text-align: center
+    &__list
+        list-style: none
+        margin: 0
+        padding: 0
+    &__row
+        margin-bottom: 52px
+        &:last-child
+            margin-bottom: 0
+    &__label
+        margin: 0 0 34px
+        font-size: 14px
+        color: $text-dark
+    &__progress
+        height: 34px
+        background: $main-bg
+        position: relative
+    &__progress-bar
+        background: #000
+        position: absolute
+        left: 0
+        height: 100%
+        color: #fff
+        text-align: right
+        box-sizing: border-box
+        padding: 10px 16px
+        font-size: 14px
+        letter-spacing: 0.12em

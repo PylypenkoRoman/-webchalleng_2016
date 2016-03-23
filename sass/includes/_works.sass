@@ -1,0 +1,42 @@
+.works
+    @extend .section
+    &__in
+        @extend .in
+        padding: 133px 0
+    &__title
+        font-size: 38px
+        margin-bottom:
+        color: $text-dark
+        text-transform: uppercase
+        letter-spacing: 0.02em
+        margin: 0 0 55px
+        text-align: center
+    &__tabs
+        text-align: center
+        margin-bottom: 48px
+    &__tab
+        display: inline-block
+        margin: 0 15px
+        font-size: 12px
+        text-transform: uppercase
+        padding-bottom: 5px
+        position: relative
+        cursor: pointer
+        text-decoration: none
+        color: $text-dark
+        &:after
+            left: 0
+            right: 0
+            bottom: 0
+            height: 2px
+            background: $text-dark
+            display: none
+            content: ""
+        &:hover, &_active
+            &:after
+                display: block
+    &__item
+        margin-bottom: 24px
+        padding: 12px
+        box-sizing: border-box
+

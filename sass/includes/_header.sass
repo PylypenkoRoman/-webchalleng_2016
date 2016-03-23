@@ -1,0 +1,55 @@
+.header
+    @extend .section
+    &__bg-img
+        display: block
+        width: 100%
+    .logo
+        position: absolute
+        top: 23px
+        left: 26px
+        width: 84px
+        height: 118px
+        &:before, &:after
+            box-sizing: border-box
+            height: 111px
+            width: 77px
+            border: 3px solid #fff
+            position: absolute
+            content: ""
+        &:before
+            top: 0
+            left: 0
+        &:after
+            top: 7px
+            left: 7px
+        a
+            display: block
+            height: 100%
+    .nav-btn
+        position: absolute
+        padding: 0
+        background: transparent
+        border: 0
+        top: 23px
+        right: 26px
+        width: 84px
+        height: 118px
+        z-index: 3
+        &:before, &:after
+            box-sizing: border-box
+            height: 111px
+            width: 77px
+            position: absolute
+            content: ""
+            background: $background-gradient
+            z-index: 2
+        &:before
+            top: 0
+            left: 0
+        &:after
+            top: 7px
+            left: 7px
+
+
+
+

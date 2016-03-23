@@ -1,0 +1,57 @@
+// Media query screen sizes
+$mobile-portrait: 320px
+$mobile-landscape: 480px
+$tablet-portrait: 600px
+$tablet-landscape: 768px
+$middle-desktop: 1024px
+$large-desktop: 1300px
+
+// Collors variables
+$main-bg: #f3f3f3
+$background-gradient: linear-gradient(to right, #f3f3f3 8%,#ffffff 100%)
+$text-dark: #1a2631
+$text-light: #6c6c6c
+
+
+
+//$pale-red: #ee6b61
+//$blue: #8db8d8
+//$dark-blue: #66a2ce
+//$purple: #a173ba
+//$green: #2eb5aa
+//$light-green: #7dcebc
+//$yellow: #f8b96c
+//$dark-gray: #383838
+//$gray: #49545c
+//$light-gray: #e5e7ed
+
+// Common styles
+html,
+body
+    height: 100%
+
+body
+    background: $main-bg
+    padding: 35px
+    box-sizing: border-box
+
+.wrapper
+    box-sizing: border-box
+    min-height: 100%
+    overflow: hidden
+
+.in
+    position: relative
+    box-sizing: border-box
+    margin: 0 auto
+    @include respond-to(middle-desktop)
+        max-width: 1024px
+
+    @include respond-to(large-desktop)
+        max-width: 1270px
+
+.section
+    position: relative
+    margin: 0 auto 35px
+    max-width: 1920px
+    background: $background-gradient
