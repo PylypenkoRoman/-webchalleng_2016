@@ -1,0 +1,75 @@
+.news
+    @extend .section
+    &__in
+        @extend .in
+    &__title
+        font-size: 45px
+        color: $text-dark
+        text-transform: uppercase
+        letter-spacing: 0.02em
+        margin: 0 0 79px
+        text-align: center
+        @include respond-to(tablet-portrait)
+            margin: 0 0 30px
+            font-size: 30px
+    &__list
+        list-style: none
+        margin: 0 -12px
+        padding: 0
+        display: flex
+        flex-wrap: wrap
+    &__item
+        width: 33.333%
+        box-sizing: border-box
+        padding: 0 12px
+        margin-bottom: 24px
+        @include respond-to(tablet-landscape)
+            width: 50%
+        @include respond-to(tablet-portrait)
+            width: 100%
+            margin-bottom: 35px
+    &__img-wrapper
+        margin-bottom: 15px
+    &__img
+        width: 100%
+    &__controls
+        margin-bottom: 20px
+    &__author,
+    &__date
+        color: $text-light
+        letter-spacing: 0.12em
+        font-size: 13px
+        .icon
+            color: $text-light
+            width: 28px
+            height: 28px
+            line-height: 14px
+            margin-right: 5px
+            margin-top: -8px
+            margin-bottom: -8px
+    &__author
+        margin-right: 35px
+    &__item-title
+        font-size: 14px
+        color: $text-dark
+        text-transform: uppercase
+        letter-spacing: 0.12em
+    &__text
+        color: $text-light
+        letter-spacing: 0.14em
+        line-height: 23px
+        font-size: 14px
+        @include respond-to(tablet-portrait)
+            font-size: 12px
+    &__read-more
+        font-size: 13px
+        text-transform: uppercase
+        letter-spacing: 0.12em
+        color: $text-light
+        font-weight: 600
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+
+
+

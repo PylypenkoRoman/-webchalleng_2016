@@ -1,0 +1,96 @@
+.promo
+    @extend .section
+    &__in
+        @extend .in
+        display: flex
+        @include respond-to(middle-desktop)
+            align-items: center
+        @include respond-to(tablet-landscape)
+            flex-direction: column
+    &__img-wrapper
+        padding: 0 30px
+        box-sizing: border-box
+    &__img
+        width: 312px
+        display: block
+        margin: 0 auto
+    &__block
+        flex: 1
+        padding-top: 74px
+        @include respond-to(middle-desktop)
+            padding: 0
+        @include respond-to(tablet-landscape)
+            display: flex
+            align-items: flex-start
+        @include respond-to(tablet-portrait)
+            flex-direction: column
+    &__icon-wrapper
+        width: 61px
+        height: 61px
+        color: #000
+        position: relative
+        margin: 0 30px 0 0
+        &:before,
+        &:after
+            width: 100%
+            height: 100%
+            background: transparent
+            position: absolute
+            content: ""
+            border: 2px solid #000
+            box-sizing: border-box
+        @include respond-to(middle-desktop)
+            margin: 0 auto 30px
+        &:before
+            top: -2px
+            left: -2px
+        &:after
+            top: 2px
+            left: 2px
+        .icon
+            width: 61px
+            height: 61px
+
+    &__title
+        font-size: 14px
+        letter-spacing: 0.12em
+        line-height: 23px
+        color: $text-dark
+        margin: 0
+        text-transform: uppercase
+        @include respond-to(middle-desktop)
+            text-align: center
+    &__text
+        font-size: 15px
+        letter-spacing: 0.14em
+        line-height: 23px
+        color: $text-light
+        max-width: 300px
+        margin: 0
+        @include respond-to(middle-desktop)
+            text-align: left
+    &__item
+        margin-bottom: 45px
+        display: flex
+        justify-content: flex-end
+        box-sizing: border-box
+        @include respond-to(middle-desktop)
+            flex-direction: column
+        @include respond-to(tablet-landscape)
+            padding: 0 20px
+        &_reverse
+            flex-direction: row-reverse
+            @include respond-to(middle-desktop)
+                flex-direction: column
+            .promo__icon-wrapper
+                margin: 0 0 0 30px
+                @include respond-to(middle-desktop)
+                    margin: 0 auto 30px
+            .promo__title
+                text-align: right
+                @include respond-to(middle-desktop)
+                    text-align: center
+            .promo__text
+                text-align: right
+                @include respond-to(middle-desktop)
+                    text-align: left

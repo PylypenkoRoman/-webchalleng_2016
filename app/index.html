@@ -4,22 +4,35 @@
 	<meta charset="utf-8">
 	<title>SCRIPTUM</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" href="scripts/script.js"></script>
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
-            <img class="header__bg-img" src="image/header_bg.jpg" alt="SCRIPTUM">
+		<header class="header" id="header">
+			<picture class="header__bg-img">
+				<source media="(max-width: 500px)" srcset="image/header_bg_600.jpg">
+				<img src="image/header_bg.jpg" alt="SCRIPTUM">
+			</picture>
 			<strong class="logo"><a href="#">SCRIPTUM</a></strong>
-			<button class="nav-btn">
-				<i></i>
+			<button class="nav-btn" id="nav-btn">
+				<svg class="icon icon-burger"><use xlink:href="image/sprite.svg#icon-burger"></use></svg>
 			</button>
+			<nav class="nav" id="nav">
+				<a class="nav__item" href="#about">About Scriptum</a>
+				<a class="nav__item" href="#works">Works</a>
+				<a class="nav__item" href="#development">Web development</a>
+				<a class="nav__item" href="#skills">Skills</a>
+				<a class="nav__item" href="#promo">Promo</a>
+				<a class="nav__item" href="#news">News</a>
+				<a class="nav__item" href="#quotes">Quotes</a>
+				<a class="nav__item" href="#contacts">Contacts</a>
+			</nav>
 		</header>
-		<section class="about">
+		<section class="about" id="about">
             <div class="about__in">
-                <div class="about__img-wrapper">
-                    <img class="about__img" src="image/about.jpg" alt="About Us">
-                </div>
+				<picture class="about__img-wrapper">
+					<source media="(max-width: 1359px)" srcset="image/about_960.jpg">
+					<img class="about__img" src="image/about.jpg" alt="About Us">
+				</picture>
                 <div class="about__text-block">
                     <h2 class="about__title">About scriptum</h2>
                     <p class="about__text">
@@ -32,67 +45,82 @@
                 </div>
             </div>
 		</section>
-		<section class="works">
+		<section class="works" id="works">
             <div class="works__in">
                 <h2 class="works__title">Works</h2>
-                <nav class="works__tabs">
-                    <a href="" class="works__tab works__tab_active">All</a>
-                    <a href="" class="works__tab">Design</a>
-                    <a href="" class="works__tab">Web</a>
-                    <a href="" class="works__tab">Brand</a>
-                    <a href="" class="works__tab">Art</a>
+                <nav class="works__filter">
+                    <a href="" class="works__filter-item works__filter-item_active" data-category="all">All</a>
+                    <a href="" class="works__filter-item" data-category="design">Design</a>
+                    <a href="" class="works__filter-item" data-category="web">Web</a>
+                    <a href="" class="works__filter-item" data-category="brand">Brand</a>
+                    <a href="" class="works__filter-item" data-category="art">Art</a>
                 </nav>
-                <div class="works__tab-content">
-
+                <div class="works__content">
+                    <a class="works__item" href="#" data-postcat="design">
+                        <img src="image/works_1.jpg" alt="">
+                    </a>
+                    <a class="works__item" href="#" data-postcat="design">
+                        <img src="image/works_2.jpg" alt="">
+                    </a>
+                    <a class="works__item" href="#" data-postcat="web">
+                        <img src="image/works_3.jpg" alt="">
+                    </a>
+                    <a class="works__item" href="#" data-postcat="web">
+                        <img src="image/works_4.jpg" alt="">
+                    </a>
+                    <a class="works__item" href="#" data-postcat="brand">
+                        <img src="image/works_5.jpg" alt="">
+                    </a>
+                    <a class="works__item" href="#" data-postcat="brand">
+                        <img src="image/works_6.jpg" alt="">
+                    </a>
+                    <a class="works__item" href="#" data-postcat="art">
+                        <img src="image/works_7.jpg" alt="">
+                    </a>
+					<a class="works__item" href="#" data-postcat="art">
+						<img src="image/works_8.jpg" alt="">
+					</a>
                 </div>
             </div>
 
 		</section>
-		<section class="development">
+		<section class="development" id="development">
 			<div class="development__img-wrapper">
-				<img src="#" alt="Web Development">
+				<picture class="development__img">
+					<source media="(max-width: 1359px)" srcset="image/development_960.jpg">
+					<img src="image/development.jpg" alt="Web Development">
+				</picture>
 				<h2 class="development__title">Web development</h2>
 			</div>
-			<div class="development">
+			<div class="development__content">
 				<div class="development__item">
-					<i class="development__icon">
-
-					</i>
-					<h3 class="development__item-title">Design</h3>
+					<svg class="icon icon-design-tools"><use href="image/sprite.svg#icon-design-tools"></use></svg>
+					<span class="development__item-label">Design</span>
 				</div>
 				<div class="development__item">
-					<i class="development__icon">
-
-					</i>
-					<h3 class="development__item-title">Night work</h3>
+					<svg class="icon icon-lamp"><use xlink:href="image/sprite.svg#icon-lamp"></use></svg>
+					<span class="development__item-label">Night work</span>
 				</div>
 				<div class="development__item">
-					<i class="development__icon">
-
-					</i>
-					<h3 class="development__item-title">Communication</h3>
+					<svg class="icon icon-plane"><use xlink:href="image/sprite.svg#icon-plane"></use></svg>
+					<span class="development__item-label">Communication</span>
 				</div>
 				<div class="development__item">
-					<i class="development__icon">
-
-					</i>
-					<h3 class="development__item-title">Safety</h3>
+					<svg class="icon icon-key"><use xlink:href="image/sprite.svg#icon-key"></use></svg>
+					<span class="development__item-label">Safety</span>
 				</div>
 				<div class="development__item">
-					<i class="development__icon">
-
-					</i>
-					<h3 class="development__item-title">Coordination</h3>
+					<svg class="icon icon-compas"><use xlink:href="image/sprite.svg#icon-compas"></use></svg>
+					<span class="development__item-label">Coordination</span>
 				</div>
 				<div class="development__item">
-					<i class="development__icon">
-
-					</i>
-					<h3 class="development__item-title">Development</h3>
+					<svg class="icon icon-settings"><use xlink:href="image/sprite.svg#icon-settings"></use></svg>
+					<span class="development__item-label">Development</span>
 				</div>
 			</div>
 		</section>
-		<section class="skills">
+
+		<section class="skills" id="skills">
             <div class="skills__in">
                 <h2 class="skills__title">skills</h2>
                 <ul class="skills__list">
@@ -118,116 +146,225 @@
             </div>
 		</section>
 
-		<section class="promo">
-			<div class="promo__column">
-				<div class="promo__item">
-					<div class="promo__icon-wrapper">
-						<i class="promo__icon"></i>
+		<section class="promo" id="promo">
+			<div class="promo__in">
+				<div class="promo__block">
+					<div class="promo__item">
+						<div class="promo__icon-wrapper">
+							<svg class="icon icon-mountains"><use xlink:href="image/sprite.svg#icon-mountains"></use></svg>
+						</div>
+						<div class="promo__text-block">
+							<h3 class="promo__title">beautiful photos</h3>
+							<p class="promo__text">
+								It is a long established fact that a reader will be distracted by the
+								readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+								that it has a more-or-less.
+							</p>
+						</div>
 					</div>
-					<div class="promo__text-block">
-						<h3 class="promo__title">beautiful photos</h3>
-						<p class="promo__text">
-							It is a long established fact that a reader will be distracted by the
-							readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-							that it has a more-or-less.
-						</p>
-					</div>
-				</div>
-				<div class="promo__item">
-					<div class="promo__icon-wrapper">
-						<i class="promo__icon"></i>
-					</div>
-					<div class="promo__text-block">
-						<h3 class="promo__title">full responsive</h3>
-						<p class="promo__text">
-							Integer quis tortor metus. Aliquam et lacus nulla. Pellentesque habitant
-							morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut eros nibh.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="promo__column">
-				<img class="promo__img" src="" alt="">
-			</div>
-			<div class="promo__column">
-				<div class="promo__item">
-					<div class="promo__icon-wrapper">
-						<i class="promo__icon"></i>
-					</div>
-					<div class="promo__text-block">
-						<h3 class="promo__title">retina ready</h3>
-						<p class="promo__text">
-							Proin vitae quam mollis diam faucibus porta hendrerit vitae diam. Aenean cursus massa quis
-							sem dictum convallis. Morbi ornare rutrum tellus, eu dapibus magna iaculis dictum. Nam nibh
-							arcu.
-						</p>
+					<div class="promo__item">
+						<div class="promo__icon-wrapper">
+							<svg class="icon icon-phone"><use xlink:href="image/sprite.svg#icon-phone"></use></svg>
+						</div>
+						<div class="promo__text-block">
+							<h3 class="promo__title">full responsive</h3>
+							<p class="promo__text">
+								Integer quis tortor metus. Aliquam et lacus nulla. Pellentesque habitant
+								morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut eros nibh.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="promo__item">
-					<div class="promo__icon-wrapper">
-						<i class="promo__icon"></i>
+				<div class="promo__img-wrapper">
+					<img class="promo__img" src="image/iphone.png" alt="iphone">
+				</div>
+				<div class="promo__block">
+					<div class="promo__item promo__item_reverse">
+						<div class="promo__icon-wrapper">
+							<svg class="icon icon-eye"><use xlink:href="image/sprite.svg#icon-eye"></use></svg>
+						</div>
+						<div class="promo__text-block">
+							<h3 class="promo__title">retina ready</h3>
+							<p class="promo__text">
+								Proin vitae quam mollis diam faucibus porta hendrerit vitae diam. Aenean cursus massa quis
+								sem dictum convallis. Morbi ornare rutrum tellus, eu dapibus magna iaculis dictum. Nam nibh
+								arcu.
+							</p>
+						</div>
 					</div>
-					<div class="promo__text-block">
-						<h3 class="promo__title">crafted on coffeescript</h3>
-						<p class="promo__text">Sed a ipsum molestie, pellentesque felis at, vestibulum nunc. Aenean eu tristique elit. Vivamus ullamcorper id ante nec condimentum. In eleifend convallis ante in semper. Nam vitae com.</p>
+					<div class="promo__item promo__item_reverse">
+						<div class="promo__icon-wrapper">
+							<svg class="icon icon-coffee"><use xlink:href="image/sprite.svg#icon-coffee"></use></svg>
+						</div>
+						<div class="promo__text-block">
+							<h3 class="promo__title">crafted on coffeescript</h3>
+							<p class="promo__text">Sed a ipsum molestie, pellentesque felis at, vestibulum nunc. Aenean eu tristique elit. Vivamus ullamcorper id ante nec condimentum. In eleifend convallis ante in semper. Nam vitae com.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="news">
-			<h2 class="news__title">news</h2>
-			<ul class="news__list">
-				<li lass="news__item">
-					<div class="news__img-wrapper">
-						<img class="news__img" src="#" alt="">
-					</div>
-					<div class="news__controls">
-						<span class="news__autor"><i></i>Stone Clad</span>
-						<span class="news__date"><i></i>7.01.2017</span>
-					</div>
-					<h3 class="news__item-title">Maecenas consequat turpis at ante</h3>
-					<p class="news__text">It is a long established fact that a reader will be distracted.</p>
-					<a class="news__read-more" href="#">learn more</a>
-				</li>
-			</ul>
+		<section class="news" id="news">
+			<div class="news__in">
+				<h2 class="news__title">news</h2>
+				<ul class="news__list">
+					<li class="news__item">
+						<div class="news__img-wrapper">
+							<img class="news__img" src="image/news_1.jpg" alt="">
+						</div>
+						<div class="news__controls">
+							<span class="news__author">
+								<svg class="icon icon-pencil"><use xlink:href="image/sprite.svg#icon-pencil"></use></svg>Stone Clad
+							</span>
+							<span class="news__date">
+								<svg class="icon icon-calendar"><use xlink:href="image/sprite.svg#icon-calendar"></use></svg>7.01.2017
+							</span>
+						</div>
+						<h3 class="news__item-title">Maecenas consequat turpis at ante</h3>
+						<p class="news__text">It is a long established fact that a reader will be distracted.</p>
+						<a class="news__read-more" href="#">learn more</a>
+					</li>
+					<li class="news__item">
+						<div class="news__img-wrapper">
+							<img class="news__img" src="image/news_2.jpg" alt="">
+						</div>
+						<div class="news__controls">
+							<span class="news__author">
+								<svg class="icon icon-pencil"><use xlink:href="image/sprite.svg#icon-pencil"></use></svg>Stone Clad
+							</span>
+							<span class="news__date">
+								<svg class="icon icon-calendar"><use xlink:href="image/sprite.svg#icon-calendar"></use></svg>7.01.2017
+							</span>
+						</div>
+						<h3 class="news__item-title">Maecenas consequat turpis at ante</h3>
+						<p class="news__text">It is a long established fact that a reader will be distracted.</p>
+						<a class="news__read-more" href="#">learn more</a>
+					</li>
+					<li class="news__item">
+						<div class="news__img-wrapper">
+							<img class="news__img" src="image/news_3.jpg" alt="">
+						</div>
+						<div class="news__controls">
+							<span class="news__author">
+								<svg class="icon icon-pencil"><use xlink:href="image/sprite.svg#icon-pencil"></use></svg>Stone Clad
+							</span>
+							<span class="news__date">
+								<svg class="icon icon-calendar"><use xlink:href="image/sprite.svg#icon-calendar"></use></svg>7.01.2017
+							</span>
+						</div>
+						<h3 class="news__item-title">Maecenas consequat turpis at ante</h3>
+						<p class="news__text">It is a long established fact that a reader will be distracted.</p>
+						<a class="news__read-more" href="#">learn more</a>
+					</li>
+				</ul>
+			</div>
 		</section>
 
-		<section class="quotes"></section>
+		<section class="quotes" id="quotes">
+			<div class="quotes__img-wrapper">
+				<picture class="quotes__img">
+					<source media="(max-width: 1359px)" srcset="image/quotes_960.jpg">
+					<img src="image/quotes.jpg" alt="Quotes">
+				</picture>
+				<h2 class="quotes__title">quotes from east north clients</h2>
+			</div>
+			<div class="quotes__content">
+				<div class="quotes__slider-wrapper">
+					<div class="quotes__slider" id="slider">
+						<div class="slide">
+							<p class="quotes__text">
+								Wroin dapibus nunc eget porta, vulputate
+								consectetur. Donec non eleifend sem. Integer
+								eleifend tellus. Fusce quis ullamcorper,
+								pretium nibh undo leo vel.
+							</p>
+						</div>
+						<div class="slide">
+							<p class="quotes__text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt
+								ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam.
+							</p>
+						</div>
+						<div class="slide">
+							<p class="quotes__text">
+								Wroin dapibus nunc eget porta, vulputate
+								consectetur. Donec non eleifend sem. Integer
+								eleifend tellus. Fusce quis ullamcorper,
+								pretium nibh undo leo vel.
+							</p>
+						</div>
+						<div class="slide">
+							<p class="quotes__text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt
+								ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-		<section class="contacts">
-			<h2 class="contacts__title"></h2>
-
-			<form class="form">
-				<div class="form__row">
-					<div class="form__item">
-						<input class="input" type="text">
+		<section class="contacts" id="contacts">
+			<div class="contacts__in">
+				<h2 class="contacts__title">Contact us</h2>
+				<form class="form">
+					<div class="form__row">
+						<div class="form__item">
+							<input class="form__input" type="text" placeholder="*Name">
+						</div>
+						<div class="form__item">
+							<input class="form__input" type="text" placeholder="*Surname">
+						</div>
 					</div>
-					<div class="form__item">
-						<input class="input" type="text">
+					<div class="form__row">
+						<div class="form__item">
+							<input class="form__input" type="email" placeholder="*Email">
+						</div>
 					</div>
-				</div>
-				<div class="form__row">
-					<div class="form__item">
-						<input class="input" type="email">
+					<div class="form__row">
+						<div class="form__item">
+							<textarea class="form__textarea" placeholder="Message"></textarea>
+						</div>
 					</div>
-				</div>
-				<div class="form__row">
-					<div class="form__item">
-						<textarea class="textarea"></textarea>
-					</div>
-				</div>
-				<div class="form__row">
 					<button class="form__btn">Send</button>
-				</div>
-			</form>
+				</form>
+			</div>
 		</section>
 
 		<section class="footer">
-			<p></p>
+			<div class="footer__in">
+				<div class="social-networks">
+					<a class="social-networks__item" href="#">
+						<svg class="icon icon-twitter"><use xlink:href="image/sprite.svg#icon-twitter"></use></svg>
+					</a>
+					<a class="social-networks__item" href="#">
+						<svg class="icon icon-facebook"><use xlink:href="image/sprite.svg#icon-facebook"></use></svg>
+					</a>
+					<a  class="social-networks__item" href="#">
+						<svg class="icon icon-behance"><use xlink:href="image/sprite.svg#icon-behance"></use></svg>
+					</a>
+				</div>
+				<span class="copyright">Designed by Andrejs Hairulins - 2016©</span>
+				<a class="to-top-btn" href="#header">
+					<svg class="icon icon-arrow"><use xlink:href="image/sprite.svg/#icon-arrow"></use></svg>
+				</a>
+			</div>
 		</section>
 
 	</div>
+	<!-- Javascript -->
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/svgxuse.js"></script>
+	<script src="js/picturefill.min.js"></script>
+	<script src="js/script.js"></script>
+	<!---------------->
+
 
 </body>
 </html>

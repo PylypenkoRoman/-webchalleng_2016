@@ -2,7 +2,6 @@
     @extend .section
     &__in
         @extend .in
-        padding: 133px 0
     &__title
         font-size: 38px
         margin-bottom:
@@ -11,10 +10,12 @@
         letter-spacing: 0.02em
         margin: 0 0 55px
         text-align: center
-    &__tabs
+        @include respond-to(tablet-landscape)
+            margin: 0 0 30px
+    &__filter
         text-align: center
         margin-bottom: 48px
-    &__tab
+    &__filter-item
         display: inline-block
         margin: 0 15px
         font-size: 12px
@@ -24,19 +25,33 @@
         cursor: pointer
         text-decoration: none
         color: $text-dark
+        @include respond-to(tablet-portrait)
+            margin: 0 10px
         &:after
             left: 0
             right: 0
             bottom: 0
             height: 2px
             background: $text-dark
-            display: none
             content: ""
+            position: absolute
+            transition: 0.3s
+            opacity: 0
         &:hover, &_active
             &:after
-                display: block
+                opacity: 1
+    &__content
+        line-height: 0
+        column-count: 3
+        column-gap: 24px
+        @include respond-to(tablet-landscape)
+            column-count: 2
+        @include respond-to(tablet-portrait)
+            column-count: 1
+            column-gap: 0
     &__item
         margin-bottom: 24px
-        padding: 12px
-        box-sizing: border-box
-
+        display: inline-block
+        img
+            width: 100%
+            height: auto

@@ -1,0 +1,55 @@
+.footer
+    @extend .section
+    &__in
+        @extend .in
+        padding: 50px 15px
+        @include respond-to(middle-desktop)
+            padding: 40px 25px
+        @include respond-to(tablet-portrait)
+            padding: 40px 70px
+.social-networks
+    vertical-align: middle
+    margin-bottom: 15px
+    @include respond-to(tablet-portrait)
+        text-align: center
+    &__item
+        margin-right: 15px
+        color: #2f2f2f
+        display: inline-block
+        vertical-align: middle
+        .icon
+            width: 18px
+            height: 18px
+.copyright
+    font-size: 14px
+    letter-spacing: 0.14em
+    line-height: 23px
+    color: #5c5c5c
+    @include respond-to(tablet-portrait)
+        text-align: center
+.to-top-btn
+    height: 39px
+    width: 44px
+    color: $main-bg
+    background-color: $text-dark
+    display: block
+    border: 0
+    position: absolute
+    right: 0
+    top: 50%
+    margin-top: -20px
+    transition: 0.3s
+    background-image: url("../image/arrow.png")
+    background-position: center center
+    background-repeat: no-repeat
+    @include respond-to(middle-desktop)
+        right: 15px
+    &:hover
+        background-color: $text-light
+        color: $text-dark
+    .icon
+        transition: 0.3s
+        color: #fff
+        width: 13px
+        height: 8px
+        display: inline-block

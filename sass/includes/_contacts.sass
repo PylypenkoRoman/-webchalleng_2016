@@ -1,0 +1,75 @@
+.contacts
+    @extend .section
+    &__in
+        @extend .in
+    &__title
+        font-size: 45px
+        color: $text-dark
+        text-transform: uppercase
+        letter-spacing: 0.02em
+        margin: 0 0 122px
+        text-align: center
+        @include respond-to(tablet-landscape)
+            margin: 0 0 30px
+        @include respond-to(middle-desktop)
+            font-size: 30px
+    .form
+        padding: 0 153px
+        box-sizing: border-box
+        @include respond-to(middle-desktop)
+            padding: 0
+
+.form
+    &__row
+        margin: 0 -14px 34px
+        display: flex
+        flex-wrap: wrap
+    &__item
+        flex: 1
+        padding: 0 14px
+        box-sizing: border-box
+        @include respond-to(tablet-landscape)
+            width: 100%
+            flex: auto
+            &+.form__item
+                margin-top: 34px
+    &__input,
+    &__textarea
+        color: #c0c0c0
+        width: 100%
+        box-sizing: border-box
+        line-height: 24px
+        background: #efefef
+        border: 0
+        text-transform: uppercase
+        font-weight: bold
+        outline: none
+    &__input
+        padding: 21px 35px
+        height: 66px
+        @include respond-to(middle-desktop)
+            height: 46px
+            padding: 11px 35px
+    &__textarea
+        padding: 30px 35px
+        height: 367px
+        resize: none
+        @include respond-to(tablet-landscape)
+            height: 150px
+        @include respond-to(middle-desktop)
+            padding: 11px 35px
+    &__btn
+        color: #c0c0c0
+        font-size: 14px
+        letter-spacing: 0.14em
+        border: 0
+        background: transparent
+        font-weight: bold
+        height: 66px
+        padding: 21px 35px
+        transition: 0.3s
+        @include respond-to(middle-desktop)
+            height: 46px
+            padding: 11px 35px
+        &:hover
+            background: #efefef

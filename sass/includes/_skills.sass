@@ -2,7 +2,6 @@
     @extend .section
     &__in
         @extend .in
-        padding: 133px 0
     &__title
         font-size: 45px
         color: $text-dark
@@ -10,6 +9,9 @@
         letter-spacing: 0.02em
         margin: 0 0 70px
         text-align: center
+        @include respond-to(tablet-portrait)
+            margin: 0 0 30px
+            font-size: 30px
     &__list
         list-style: none
         margin: 0
@@ -21,7 +23,11 @@
     &__label
         margin: 0 0 34px
         font-size: 14px
+        text-transform: uppercase
         color: $text-dark
+        @include respond-to(tablet-landscape)
+            text-align: center
+            margin: 0 0 20px
     &__progress
         height: 34px
         background: $main-bg

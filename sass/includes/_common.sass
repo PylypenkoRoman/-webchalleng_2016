@@ -4,7 +4,7 @@ $mobile-landscape: 480px
 $tablet-portrait: 600px
 $tablet-landscape: 768px
 $middle-desktop: 1024px
-$large-desktop: 1300px
+$large-desktop: 1360px
 
 // Collors variables
 $main-bg: #f3f3f3
@@ -13,42 +13,39 @@ $text-dark: #1a2631
 $text-light: #6c6c6c
 
 
-
-//$pale-red: #ee6b61
-//$blue: #8db8d8
-//$dark-blue: #66a2ce
-//$purple: #a173ba
-//$green: #2eb5aa
-//$light-green: #7dcebc
-//$yellow: #f8b96c
-//$dark-gray: #383838
-//$gray: #49545c
-//$light-gray: #e5e7ed
-
 // Common styles
 html,
 body
     height: 100%
 
 body
-    background: $main-bg
-    padding: 35px
-    box-sizing: border-box
+    font-family: "Baron_Neue_Regular"
+    font-weight: normal
 
 .wrapper
     box-sizing: border-box
     min-height: 100%
     overflow: hidden
+    background: $main-bg
+    padding: 35px
+    @include respond-to(tablet-landscape)
+        padding: 0
+
 
 .in
     position: relative
     box-sizing: border-box
     margin: 0 auto
+    max-width: 1300px
+    padding: 133px 15px
     @include respond-to(middle-desktop)
-        max-width: 1024px
-
-    @include respond-to(large-desktop)
-        max-width: 1270px
+        max-width: 960px
+        padding: 100px 15px
+    @include respond-to(tablet-landscape)
+        max-width: 768px
+        padding: 30px 15px
+    @include respond-to(tablet-portrait)
+        max-width: 100%
 
 .section
     position: relative

@@ -3,31 +3,50 @@
     &__in
         @extend .in
         display: flex
-        padding: 133px 0
+        @include respond-to(middle-desktop)
+            display: block
     &__img-wrapper
         width: 680px
+        @include respond-to(middle-desktop)
+            width: 100%
     &__img
         width: 100%
         display: block
+        @include respond-to(tablet-landscape)
+            display: none
     &__text-block
         box-sizing: border-box
         padding-left: 45px
+        padding-top: 58px
         flex: 1
+        @include respond-to(middle-desktop)
+            padding-left: 0
+        @include respond-to(tablet-landscape)
+            padding-top: 0
     &__title
         color: $text-dark
         font-size: 45px
         text-transform: uppercase
         letter-spacing: 0.02em
         margin: 0 0 45px
+        @include respond-to(tablet-landscape)
+            text-align: center
+            font-size: 38px
+            margin: 0 0 30px
     &__text
         font-size: 15px
         color: $text-light
         line-height: 23px
         letter-spacing: 0.14em
         margin: 0 0 45px
+        @include respond-to(tablet-landscape)
+            margin: 0 0 30px
     &__read-more
         font-size: 13px
         text-transform: uppercase
         color: $text-dark
         text-decoration: none
         letter-spacing: 0.12em
+        transition: 0.3s
+        &:hover
+            text-decoration: underline
